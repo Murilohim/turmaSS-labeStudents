@@ -18,7 +18,7 @@ export default async function createStudent (req: Request, res: Response): Promi
         res.status(201).end()
 
     } catch(error: any) {
-
+        res.status(500).end()
     }
 
 
