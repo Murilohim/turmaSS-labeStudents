@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
 import { app } from "./app"
+import createStudent from "./endpoints/createStudent"
+import getAllStudents from "./endpoints/getAllStudents"
 
-app.get("/test", async (req: Request, res: Response) => {
-    res.status(200).send("Hello World!")
-})
+app.get("/students", getAllStudents)
+app.post("/students", createStudent)
